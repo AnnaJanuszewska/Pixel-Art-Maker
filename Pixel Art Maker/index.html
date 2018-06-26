@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Pixel Art Maker!</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:700i" rel="stylesheet"> 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <header id="header">
+      <h1>Lab: Pixel Art Maker</h1>
+      <p><span id="artist">Background painting: <em>Morning Fjord</em> by <a href="http://www.silviavassileva.com/" target="_blank" title="Page about Silvia Vassileva"><strong>Silvia Vassileva</strong></a></span><span id="created">Created by Anna Januszewska</span></p>
+    </header>
+    <div id="designGrid">
+      <div id="size">
+      <h2>Choose grid size:</h2>
+      <form id="sizePicker" name="gridSize">
+        <h3><span>Grid Height: </span><span id="gridHeightDisplay">15</span></h3>
+        <input type="range" id="inputHeight" class="slider"  title="Set grid height" name="height" min="1" max="30" value="15"/></br>
+        <h3><span>Grid Width: </span><span id="gridWidthDisplay">15</span></h3>
+        <input type="range" id="inputWidth" class="slider"  title="Set grid width" name="width" min="1" max="30" value="15"/></br>
+        <input type="submit" id="createGrid" class="button" value="create grid">
+        <button id="clearGrid" class="button clear" value="clear grid">Clear grid</button>
+      </form>
+      </div>
+      <div id="color">
+        <h2 id="setColor">Pick a color:</h2>
+        <input type="color" id="colorPicker" value="#075582" title="Set PAINT color">
+        <p>Single click a cell to erase a color</p>
+      </div>
+    </div>
+    <div id="canvas">
+      <h2>Design Canvas</h2>
+      <table id="pixelCanvas"></table>
+    </div>
+    <script src="design.js"></script>
+</body>
+</html>
