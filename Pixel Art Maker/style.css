@@ -56,11 +56,6 @@ header h1 {
     top: 8em;
 }
 
-div#color p {
-    font-size: 1em;;
-    padding-top: 2.5em;
-}
-
 h2 {
     font-size: 1.5em;
     color: midnightblue;
@@ -70,6 +65,11 @@ h2 {
 h3 {
     display: inline-block;
     padding: 5px;
+}
+
+div#color p {
+    font-size: 1em;;
+    padding-top: 2.5em;
 }
 
 .button {
@@ -215,15 +215,25 @@ td {
     width: 20px;
 }
 
-@media only screen and (max-width: 650px) {
-    #designGrid {
-       width: 80%;
-       position: static;
-    }
-    
-    #canvas {
-        width: 80%;
+@media only screen and (max-width: 950px) {
+    #designGrid, #canvas {
         position: static;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 1em;
+     }
 
-    }
+     #designGrid {
+         display: flex;
+         flex-flow: column wrap;
+         justify-content: space-around;
+     }
+
+     input[type=range] {
+        -webkit-appearance: none;
+        margin: 10px 0;
+        width: 45%;
+      }
+
 }
+
