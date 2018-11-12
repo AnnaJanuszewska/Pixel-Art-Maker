@@ -1,12 +1,12 @@
-let height = $("#inputHeight").val();
-let width = $("#inputWidth").val();
-let color = $("#colorPicker").val();
 const grid = $("#pixelCanvas");
 
 
 $("#createGrid").click(function(event) {
+  let height = $("#inputHeight").val();
+  let width = $("#inputWidth").val();
   event.preventDefault();
   makeGrid(height, width);
+  console.log(height, width);
 });
 
 function makeGrid(y, x) {
@@ -20,7 +20,7 @@ function makeGrid(y, x) {
 }
 
 $("td").click(function addColor() {
-
+    let color = $("#colorPicker").val();
     if ($(this).attr("style")) {
       $(this).removeAttr("style");
     } else {
